@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:appstudio="http://schemas.microsoft.com/developer/appx/2015/appstudio" 
+  IgnorableNamespaces="uap mp appstudio">
+    		<Identity Name="20230BioApps.ezpz.cz" Publisher="CN=A53C91F9-A2CD-4836-848D-E49763ECDDB3" Version="1.0.0.0" />
+	    <mp:PhoneIdentity PhoneProductId="9d3cdec4-3ccc-46b1-abca-8069b6ffd7ed" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+    <Properties>
+        <DisplayName>ezpz.cz</DisplayName>
+        <PublisherDisplayName>BioApps</PublisherDisplayName>
+        <Logo>images\StoreLogo.png</Logo>
+    </Properties>
+    <Dependencies>
+        <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+    </Dependencies>
+    <Resources>
+        <Resource Language="x-generate"/>
+    </Resources>
+    <Applications>
+        <Application Id="App" StartPage="http://www.ezpz.cz">
+            <uap:VisualElements DisplayName="ezpz.cz"
+              Description="This is hosted web app of portal ezpz.cz which is gaming portal with game Counter-Strike Global Offensive."
+              BackgroundColor="#4c4a48"
+              Square150x150Logo="images\Square150x150Logo.png"
+              Square44x44Logo="images\Square44x44Logo.png">
+                <uap:SplashScreen Image="images\SplashScreen.png" BackgroundColor="#4c4a48" />
+                <uap:DefaultTile Wide310x150Logo="images\Wide310x150Logo.png" Square310x310Logo="images\Square310x310Logo.png">
+                    <uap:ShowNameOnTiles>
+                        <uap:ShowOn Tile="wide310x150Logo"/>
+						<uap:ShowOn Tile="square310x310Logo" />
+                    </uap:ShowNameOnTiles>
+                </uap:DefaultTile>
+                <uap:InitialRotationPreference>
+                    <uap:Rotation Preference="portrait"/>
+                </uap:InitialRotationPreference>
+            </uap:VisualElements>
+            <uap:ApplicationContentUriRules>
+                <uap:Rule Type="include" Match="http://www.ezpz.cz" WindowsRuntimeAccess="all"/>
+                <uap:Rule Type="include" Match="http://*.ezpz.cz" WindowsRuntimeAccess="all"/>
+            </uap:ApplicationContentUriRules>
+        </Application>
+    </Applications>
+    <Capabilities>
+        <Capability Name="internetClient" />
+    </Capabilities>
+    <appstudio:Metadata>
+        <appstudio:Item Name="appId" Value="20230BioApps.ezpz.cz" />
+        <appstudio:Item Name="model" Version="1.11" />
+        <appstudio:Item Name="formula" Value="Hwa" Version="1.12.0329.1" />
+    </appstudio:Metadata>
+</Package>
